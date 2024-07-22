@@ -1,6 +1,7 @@
 import React from 'react'
 import AdminHeading from './sub-component/AdminHeading'
 import Chart from './sub-component/Chart'
+import FolderList from './Listitem'
 
 const MainPage = () => {
   return (
@@ -11,6 +12,16 @@ const MainPage = () => {
     </div>
     <div>
       <Chart/>
+    </div>
+
+    <div className='item-list'>
+  
+    <div className='item-heading'>
+    <h1>Today</h1>
+    <p>...</p>
+    </div>
+    <FolderList/>
+   
     </div>
     </div>
       <div className='main-page-right w-30'>

@@ -84,7 +84,7 @@ if (UserAuthLoginData.data) {
   
   setData(UserAuthLoginData.data)
   toast.success("user login successful ")
-  // addAccessToken(AuthLoggedIn.accessToken)
+  // addAccessToken(UserAuthLoginData.accessToken)
   navigate("/");
 }
   },[UserAuthLoginData.data])
@@ -98,7 +98,7 @@ if (UserAuthLoginData.data) {
       otp:""
     })
     }
-    toast.error(UserAuthLoginData?.error?.message)
+    toast.error(UserAuthLoginData?.error?.message || "invalid credentials")
       },[UserAuthLoginData.error])
 
      
