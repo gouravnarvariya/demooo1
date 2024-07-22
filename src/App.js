@@ -10,6 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import VerifyOtp from './component/signup/sub-component/VerifyOtp';
 import ProtectedRoute from './utils/ProtectedRoute';
 import NotFound from './utils/NotFound';
+import Sidebar from './component/common/Sidebar';
 function App() {
   const routes = useRoutes([
     {path:'/login' , element:<Login/>},
@@ -20,13 +21,14 @@ function App() {
       path:'/*' ,
       element:
       // <ProtectedRoute>
-      <div>
+      <div className='grid-container'>
+      <Sidebar/>
         <Routes>
           <Route index='/' element=<MainPage/> />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
-      // </ProtectedRoute>
+      //  </ProtectedRoute>
     }
 
   ])
